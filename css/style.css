@@ -1242,6 +1242,22 @@ textarea.form-control {
     border-radius: 0.25rem;
 }
 
+/* Default styles */
+.scroll-container img {
+    width: 410px;
+    height: 300px;
+  }
+  
+  /* Responsive styles for mobile view */
+  @media screen and (max-width: 768px) {
+    .scroll-container img {
+      width: 205px; /* 50% of 410px */
+      height: 150px; /* 50% of 300px */
+    }
+  }
+  
+
+
 @keyframes progress-bar-stripes {
     0% {
         background-position-x: 1rem;
