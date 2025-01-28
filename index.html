@@ -11,6 +11,7 @@
           overflow: auto;
           white-space: nowrap;
           padding: 5px;
+          margin-bottom: 30px;
         }
         
         div.scroll-container img {
@@ -103,59 +104,47 @@
 <body>
     <style>
         .marquee-container {
-            width: 100%;
+            width: 93%; /* Adjust width to leave space on left and right */
             overflow: hidden;
-            /* Hide the overflowing content */
             background: #f4f4f4;
-            /* Background color */
             border: 1px solid #ddd;
-            /* Border color */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            /* Shadow for better look */
             position: relative;
             padding: 10px 0;
             white-space: nowrap;
-            /* Prevent text wrapping */
+            margin: 0 auto 30px auto; /* Center the container and add bottom margin */
         }
 
         .marquee-content {
             display: inline-flex;
-            /* Align items in a row */
             align-items: center;
-            /* Vertically center items */
             white-space: nowrap;
             padding-left: 100%;
-            /* Start the content off-screen */
             animation: marquee 30s linear infinite;
             font-size: 1.5rem;
-            /* Font size */
             color: rgb(0, 0, 0);
-            /* Text color */
             transition: animation 0.5s ease-in-out;
-            /* Smooth transition on hover */
         }
 
         .marquee-content img {
             height: 50px;
             margin-left: 20px;
-            /* Space between text and image */
         }
 
         .marquee-container:hover .marquee-content {
             animation-play-state: paused;
-            /* Pause animation on hover */
         }
 
         @keyframes marquee {
             from {
-                transform: translateX(0);
+            transform: translateX(0);
             }
 
             to {
-                transform: translateX(-100%);
+            transform: translateX(-100%);
             }
         }
-    </style>
+        </style>
     <div class="top-wrap">
         <img src="images/banner.jpg" alt="" class="img-fluid" />
     </div>
